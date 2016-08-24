@@ -18,7 +18,7 @@ Currently only the Forum Index and Thread Index views are implemented due to lim
 * To watch for changes and recompile the .js bundle run `npm run watch`.
 
 ## Production ##
-* Run `npm run buil_prod` to produce minified bundle.
+* Run `npm run build_prod` to produce minified bundle.
 
 ## Clean ##
 * Run `npm run clean` to remove files generated in build.
