@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--
+Copyright Whirlpool.net.au and individual authors.
+Spidering, indexing or crawling of any content is
+strictly prohibited without explicit permission.
+ -->
+<!--[if lte IE 8]>
+<html class="no-js no-svg" lang="en">
+<![endif]-->
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title> Whirlpool Forums</title>
+
+
+
+
+  <meta name="ROBOTS" content="">
+
+
+  <link rel="canonical" href="http://forums.whirlpool.net.au/">
+
+
+
+  <link rel="shortcut icon" href="https://forums.whirlpool.net.au/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://forums.whirlpool.net.au/skin/image/whirlpool-2015-favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://forums.whirlpool.net.au/skin/image/whirlpool-2015-favicon-32.png">
+
+
+  <link rel="apple-touch-icon" sizes="152x152" href="https://forums.whirlpool.net.au/skin/image/whirlpool-2015-icon-152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://forums.whirlpool.net.au/skin/image/whirlpool-2015-icon-144.png">
+
+
+
+  <link rel="search" type="application/opensearchdescription+xml" title="Whirlpool Search" href="https://forums.whirlpool.net.au/static/search/forum-search.xml">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="HandheldFriendly" content="True">
+  <link rel="dns-prefetch" href="//whirlpool.net.au">
+  <link rel="dns-prefetch" href="//bc.whirlpool.net.au">
+  <link rel="dns-prefetch" href="//forums.whirlpool.net.au">
+  <link rel="dns-prefetch" href="//whrl.pl">
+  <meta name="apple-mobile-web-app-title" content="Whirlpool">
+  <meta name="application-name" content="Whirlpool">
+  <meta name="msapplication-TileColor" content="#3A437B">
+  <meta name="msapplication-TileImage" content="https://forums.whirlpool.net.au/skin/image/whirlpool-2015-icon-152.png">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Whirlpool.net.au">
+
+  <script type="text/javascript">
+    var timing = {
+      start: Date.now()
+    };
+  </script>
+
+  <script src="forum_new.js"></script>
+
+  <link rel="stylesheet" href="https://forums.whirlpool.net.au/skin/style.css?4653">
+  <script src="https://forums.whirlpool.net.au/skin/script.js?4653"></script>
+
+
+  <!--[if lte IE 8]><script src="/skin/bower_components/respond/dest/respond.js"></script><![endif]-->
+
+  <script>
+    $(function() {
+      // This makes spoilers work on touch devices. Don't ask me how it does... Weird.
+      $("span.wcspoil").bind("touchstart touchend", function(e) {});
+      // nuke old versions of wp+
+      // setTimeout(function(){if(document.getElementById("menu_wpplus")){window.location.href="/beta.cfm?switch=gm";}},500);
+    });
+  </script>
+
+  <style>
+    .loader {
+      position: fixed;
+      transform: translate(25%, 20%);
+			transition-property: opacity;
+			transition-duration: 100ms;
+    }
+
+    .faded_out {
+      opacity: 0;
+    }
+
+    .faded_in {
+      opacity: 1;
+    }
+
+		.content
+		{
+			transition-property: opacity;
+			transition-duration: 100ms;
+			transition-timing-function: linear;
+		}
+  </style>
+
+</head>
+
+
+<body>
+
+  <div id="root">
+
+    <div id="topbar">
+      <button id="hamburger">menu</button>
+      <a id="toplogo" href="/"><span>Whirlpool</span></a>
+      <span class="accessible" style="display:none;"><a href="#navigation">Go to navigation</a></span>
+      <div id="userbar">
+
+
+
+
+        <span id="ub_name"><a href="//forums.whirlpool.net.au/user/x">user</a></span>
+        <span id="ub_settings"><a href="//whirlpool.net.au/profile/" title="User ID: #x"><span>settings</span></a>
+        </span>
+        <div id="ub_menu">
+          <ul>
+            <li><a href="//forums.whirlpool.net.au/user/x">Your profile page</a></li>
+            <li><a href="//forums.whirlpool.net.au/forum/?action=watched">Watched threads</a></li>
+            <li><a href="//forums.whirlpool.net.au/forum/?action=drafts">Drafts</a></li>
+            <li><a href="//whirlpool.net.au/whim/">Private messages</a></li>
+            <li><a href="//whirlpool.net.au/profile/">Account settings</a></li>
+            <li><a href="//whirlpool.net.au/profile/index.cfm?a=logout&amp;logout=x">Log out</a></li>
+          </ul>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div id="page">
+      <div id="logo">
+        <h1><a href="/"><span>Whirlpool</span></a></h1>
+      </div>
+      <div id="upperbar">
+
+        <div id="up_search" class="up_icon">
+          <form id="up_search_form" action="//forums.whirlpool.net.au/forum/?action=search" method="post" role="search">
+            <div id="up_search_wrap">
+              <input id="up_search_input" type="text" name="q" value="" placeholder="Search Whirlpool" autocapitalize="off" autocorrect="off">
+            </div>
+            <button id="up_search_submit" type="submit"><span>Search</span></button>
+          </form>
+        </div>
+
+
+        <ul id="breadcrumb" class="breadcrumb">
+        </ul>
+      </div>
+      <div id="innerpage">
+        <div id="innershadow"></div>
+        <div style="position: relative;">
+          <img src="img/whirly.gif" class="loader faded_out" id="content_loader" />
+          <div id="content" class="content"></div>
+        </div>
+      </div>
+
+      <div id="lowerbar">
+        <ul id="breadcrumb_footer" class="breadcrumb">
+        </ul>
+      </div>
+
+      <div id="left" class="sidebar">
+        <a name="navigation"></a>
+
+
+        <ul id="menu">
+          <li id="menu_news" class="odd ">
+            <a href="//whirlpool.net.au/"><span>Industry news</span></a>
+            <ul>
+              <li><a href="/news/?action=submit">Submit news</a></li>
+              <li><a href="/news/?action=archive">Previous articles</a></li>
+            </ul>
+          </li>
+
+          <li id="menu_forum" class="even selected">
+            <a href="//forums.whirlpool.net.au/"><span>Discussion forum</span></a>
+            <ul>
+              <li><a href="//forums.whirlpool.net.au/forum/?action=search">Search</a></li>
+              <li><a href="//forums.whirlpool.net.au/forum/?action=popular_views">Popular topics</a></li>
+              <li><a href="//whirlpool.net.au/wiki/wp_rules">Community Rules</a></li>
+              <li><a href="//whirlpool.net.au/wiki/wp_modfaq">Moderation FAQ</a></li>
+              <li><a href="//whirlpool.net.au/wiki/wp_faq">Whirlpool FAQ</a></li>
+              <li><a href="//whirlpool.net.au/wiki/wp_repcoc">Rep code of conduct</a></li>
+            </ul>
+
+            <ul style="margin-top:-4px; padding-top:3px; border-top:1px dashed #D1C9C0;">
+              <li><a href="//forums.whirlpool.net.au/user/x">Your posts</a></li>
+              <li><a href="//forums.whirlpool.net.au/forum/?action=watched">Watched threads</a></li>
+              <li><a href="//forums.whirlpool.net.au/forum/134">Talk with a mod</a></li>
+            </ul>
+
+          </li>
+          <li id="menu_wiki" class="odd ">
+            <a href="//whirlpool.net.au/wiki/"><span>Knowledge base</span></a>
+            <ul>
+              <li><a href="//whirlpool.net.au/wiki/?action=index">Index</a></li>
+            </ul>
+          </li>
+          <li id="menu_industry" class="even ">
+            <a href="//whirlpool.net.au/jobs/"><span>Job board</span></a>
+            <ul>
+              <li><a href="//whirlpool.net.au/jobs/?action=faq">FAQ</a></li>
+              <li><a href="//whirlpool.net.au/jobs/?action=post">Post a job</a></li>
+            </ul>
+          </li>
+
+
+          <li id="menu_whim" class="odd ">
+            <a href="//whirlpool.net.au/whim/"><span>Private messages</span></a>
+            <ul>
+              <li><a href="//whirlpool.net.au/whim/?action=contacts">Contacts</a></li>
+              <li><a href="//whirlpool.net.au/whim/?action=archive">Archive</a></li>
+            </ul>
+          </li>
+
+
+        </ul>
+
+
+
+
+
+        <div id="bignumbers">
+
+
+          <dl>
+            <dt>Local time</dt>
+            <dd>11:12 PM&nbsp; <a href="//whirlpool.net.au/profile/index.cfm?a=preferences">aest</a></dd>
+            <dd>12 August 2016</dd>
+          </dl>
+          <dl class="bulletproof">
+            <dt>Hosted by</dt>
+            <dd title="Managed Hosting"><a href="http://www.bulletproof.net.au/"><span>Bulletproof Managed Hosting</span></a></dd>
+          </dl>
+
+          <dl>
+            <dt>Membership</dt>
+            <dd>740,348 registered members</dd>
+            <dd>13,350 visited in past 24 hrs</dd>
+            <dd>899 members online now</dd>
+            <dd>1,310 guests visiting now</dd>
+          </dl>
+          <dl>
+            <dt>Big numbers</dt>
+            <dd>2,291,112 threads</dd>
+            <dd>51,181,461 posts</dd>
+            <dd>4,708,453 whims sent</dd>
+            <dd><a href="//whirlpool.net.au/wiki/">4,559 wiki topics</a></dd>
+
+            <dd><a href="//whirlpool.net.au/bc/hardware">1,689 modems &amp; routers</a></dd>
+            <dd>74,760 features filled</dd>
+          </dl>
+
+
+        </div>
+
+
+      </div>
+    </div>
+    <div id="footer">
+
+
+
+
+      <dl class="forumlist">
+
+        <dt>Whirlpool</dt>
+
+        <dd><a href="/forum/35">Feedback</a></dd>
+
+        <dd><a href="/forum/117">The Pool Room</a></dd>
+
+
+        <dt>Broadband</dt>
+
+        <dd><a href="/forum/92">Choosing an ISP</a></dd>
+
+        <dd><a href="/forum/100">Broadband</a></dd>
+
+        <dd><a href="/forum/142">“NBN”</a></dd>
+
+
+        <dt>Networking</dt>
+
+        <dd><a href="/forum/82">Modems/Routers</a></dd>
+
+        <dd><a href="/forum/9">Networking</a></dd>
+
+        <dd><a href="/forum/107">Voice over IP</a></dd>
+
+        <dd><a href="/forum/87">Peer to peer</a></dd>
+
+
+        <dt>IT Industry</dt>
+
+        <dd><a href="/forum/125">Telecomms</a></dd>
+
+        <dd><a href="/forum/116">Web hosting</a></dd>
+
+        <dd><a href="/forum/63">Web development</a></dd>
+
+        <dd><a href="/forum/127">Programming</a></dd>
+
+        <dd><a href="/forum/139">Server management</a></dd>
+
+
+      </dl>
+
+      <dl class="forumlist">
+
+        <dt>Companies</dt>
+
+        <dd><a href="/forum/14">Telstra Broadband</a></dd>
+
+        <dd><a href="/forum/15">Optus Broadband</a></dd>
+
+        <dd><a href="/forum/72">iiNet Group</a></dd>
+
+        <dd><a href="/forum/68">Internode</a></dd>
+
+        <dd><a href="/forum/90">TPG</a></dd>
+
+        <dd><a href="/forum/102">Eftel/ClubTelco/aaNet</a></dd>
+
+        <dd><a href="/forum/105">Exetel</a></dd>
+
+        <dd><a href="/forum/108">iPrimus</a></dd>
+
+        <dd><a href="/forum/147">Dodo</a></dd>
+
+
+        <dt>Connections</dt>
+
+        <dd><a href="/forum/31">Other broadband</a></dd>
+
+        <dd><a href="/forum/67">Regional</a></dd>
+
+        <dd><a href="/forum/5">Last century</a></dd>
+
+
+        <dt>International</dt>
+
+        <dd><a href="/forum/137">New Zealand ISPs</a></dd>
+
+
+      </dl>
+
+      <dl class="forumlist">
+
+        <dt>Mobile</dt>
+
+        <dd><a href="/forum/114">Mobile carriers</a></dd>
+
+        <dd><a href="/forum/18">Wireless ISPs</a></dd>
+
+        <dd><a href="/forum/123">Mobile phones</a></dd>
+
+        <dd><a href="/forum/128">iPhone</a></dd>
+
+        <dd><a href="/forum/141">iPad</a></dd>
+
+        <dd><a href="/forum/140">Android phones</a></dd>
+
+        <dd><a href="/forum/144">Android tablets</a></dd>
+
+        <dd><a href="/forum/148">Windows Phone</a></dd>
+
+
+        <dt>Computers</dt>
+
+        <dd><a href="/forum/7">Desktops</a></dd>
+
+        <dd><a href="/forum/129">Monitors/video</a></dd>
+
+        <dd><a href="/forum/130">Notebooks</a></dd>
+
+        <dd><a href="/forum/131">Peripherals</a></dd>
+
+        <dd><a href="/forum/10">Windows</a></dd>
+
+        <dd><a href="/forum/38">Apple</a></dd>
+
+        <dd><a href="/forum/39">Linux/BSD</a></dd>
+
+
+      </dl>
+
+      <dl class="forumlist">
+
+        <dt>Life</dt>
+
+        <dd><a href="/forum/135">Jobs</a></dd>
+
+        <dd><a href="/forum/80">Education</a></dd>
+
+        <dd><a href="/forum/136">Graduate programs</a></dd>
+
+        <dd><a href="/forum/150">Finance</a></dd>
+
+        <dd><a href="/forum/71">Lifestyle</a></dd>
+
+        <dd><a href="/forum/149">Travel</a></dd>
+
+
+        <dt>Entertainment</dt>
+
+        <dd><a href="/forum/126">Home theatre</a></dd>
+
+        <dd><a href="/forum/106">TV shows</a></dd>
+
+        <dd><a href="/forum/58">Movies</a></dd>
+
+        <dd><a href="/forum/112">Music</a></dd>
+
+        <dd><a href="/forum/8">Gaming</a></dd>
+
+        <dd><a href="/forum/118">Sport</a></dd>
+
+
+        <dt>Lounges</dt>
+
+        <dd><a href="/forum/133">Automotive</a></dd>
+
+        <dd><a href="/forum/132">Photography</a></dd>
+
+        <dd><a href="/forum/83">Gadgets</a></dd>
+
+        <dd><a href="/forum/138">Home</a></dd>
+
+        <dd><a href="/forum/143">Green tech</a></dd>
+
+        <dd><a href="/forum/91">On the web</a></dd>
+
+        <dd><a href="/forum/85">In the news</a></dd>
+
+
+      </dl>
+
+
+
+      <dl class="wikilist">
+        <dt>Help</dt>
+        <dd><a href="//whirlpool.net.au/wiki/wp_faq">Whirlpool FAQ</a></dd>
+        <dd><a href="//whirlpool.net.au/wiki/wp_rules">Community rules</a></dd>
+        <dd><a href="//whirlpool.net.au/wiki/wp_modfaq">Moderation FAQ</a></dd>
+        <dd><a href="//whirlpool.net.au/wiki/wp_repcoc">Rep code of conduct</a></dd>
+        <dd><a href="//whirlpool.net.au/wiki/wp_legal">Legal complaints</a></dd>
+        <dt>Tips</dt>
+        <dd><a href="//whirlpool.net.au/wiki/wp_scroll_to_top">Scroll to top</a></dd>
+        <dt>Sections</dt>
+
+        <dd><a href="//bc.whirlpool.net.au/bc/hardware/">Hardware database</a></dd>
+        <dd><a href="//whirlpool.net.au/wiki/">Knowledge base</a></dd>
+        <dd><a href="//whirlpool.net.au/jobs/">Job board</a></dd>
+      </dl>
+
+
+
+      <dl class="copyright">
+        <dt class="whirlpool"><a href="//whirlpool.net.au/"><span>Whirlpool.net.au</span></a></dt>
+        <dd>
+          Copyright Whirlpool.net.au
+          <br> ( <a href="//whirlpool.net.au/wiki/wp_legal">Legal</a> )
+        </dd>
+        <dt class="bulletproof" title="Managed Hosting"><a href="http://www.bulletproof.net.au/"><span>Bulletproof Networks</span></a></dt>
+
+        <dd>Managed <a href="http://www.bulletproof.net.au/aws">AWS</a>
+          <br>Powered by Bulletproof</dd>
+      </dl>
+
+    </div>
+    <br style="clear:both;">
+    <div id="hamburgerMask"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-55820-1']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_setCustomVar', 1, 'Member', 'yes', 2]);
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+      })();
+    </script>
+
+
+
+
+  </div>
+  <script>
+    // self executing function here
+    (function() {
+      document.readyState = 'complete';
+    })();
+  </script>
+</body>
+
+</html>

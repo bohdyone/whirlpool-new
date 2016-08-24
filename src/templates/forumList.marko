@@ -1,0 +1,31 @@
+<div id="forumindex">
+  <div class="column" for(column in data.COLUMNS)>
+    <div class="inner">
+
+      <div class="section" for(section in column)>
+        <h3>${section.SECTION}</h3>
+        <table>
+          <colgroup>
+            <col class="title">
+              <col class="threads">
+          </colgroup>
+          <tbody>
+
+            <tr for(forum in section.FORUMS)>
+              <td class="title" title="n threads, x posts">
+                <div class="title"><a href="#forum/${forum.ID}/${data.slashFilter(forum.TITLE)}">${forum.TITLE}</a></div>
+              </td>
+              <td class="threads">
+                <div for(thread in forum.THREADS)><a href="https://forums.whirlpool.net.au/forum-replies.cfm?t=${thread.ID}&p=-1&#bottom">$!{thread.TITLE}</a> (n mins ago)</div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <br clear="all">
+</div>

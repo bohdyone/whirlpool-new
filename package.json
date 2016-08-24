@@ -1,0 +1,31 @@
+{
+  "name": "whirlnew",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "scripts": {
+    "build": "node ./build/build.js && browserify -t markoify src/main.js -o dist/forum_new.js",
+    "build_prod": "node ./build/build.js && browserify -t markoify -g uglifyify src/main.js -o dist/forum_new.js",
+    "watch": "node ./build/build.js && watchify -v -t markoify src/main.js -o dist/forum_new.js",
+    "clean": "node ./build/clean.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "glob": "^7.0.5",
+    "markoify": "^2.1.1",
+    "uglifyify": "^3.0.2",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "aja": "^0.4.1",
+    "domready": "^1.0.8",
+    "lodash": "^4.15.0",
+    "marko": "^3.9.4",
+    "rlite-router": "^1.1.3"
+  }
+}
