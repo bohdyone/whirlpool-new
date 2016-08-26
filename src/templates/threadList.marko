@@ -51,7 +51,7 @@
 
         <td class="oldest"><a href="#">null</a>
           <br>OldestTime</td>
-        <td class="newest "><span><a href="https://forums.whirlpool.net.au/user/${thread.LAST.ID}">${thread.LAST.NAME}</a><br>n minutes ago</span></td>
+        <td class="newest "><span><a href="https://forums.whirlpool.net.au/user/${thread.LAST.ID}">${thread.LAST.NAME}</a><br>${data.minsSince(thread.LAST_DATE)} minutes ago</span></td>
         <td class="goend  "><a href="https://forums.whirlpool.net.au/forum-replies.cfm?t=${thread.ID}&p=-1&#bottom" title="Jump to last post">&#9654;</a></td>
       </tr>
     </tbody>

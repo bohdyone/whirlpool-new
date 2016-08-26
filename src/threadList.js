@@ -9,6 +9,7 @@ function showThreadList(id)
 {
   common.timing().startLoad = Date.now();
   common.showLoading(true);
+  common.log('loading threads');
   var threads = common.ajax(common.buildServiceUrl({
     get: 'threads',
     forumids: id,
@@ -22,7 +23,16 @@ function processThreadData(data, xhr)
   var crumb = '';
   var template = marko.load(threadListTpl);
 
+  data.minsSince = function(dateTime)
+  {
+    var now = new Date();
+    var then = new Date(dateTime);
+    return Math.floor((now - then) / 1000 / 60);
+  };
+
   template.render(data, function(err, html, out) {
+
+
     common.checkDomLoaded(function() {
       if (data.THREADS.length > 0)
       {
