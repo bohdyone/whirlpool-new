@@ -51,12 +51,11 @@ function initRouter(router) {
     threadList.showThreadList(r.params.forumId);
   });
 
-  // Hash-based routing
-  function processHash() {
+  router.processHash = function() {
     var hash = location.hash || '#';
     router.run(hash.slice(1));
-  }
+  };
 
-  window.addEventListener('hashchange', processHash);
-  processHash();
+  window.addEventListener('hashchange', router.processHash);
+  router.processHash();
 }

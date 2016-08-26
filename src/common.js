@@ -91,8 +91,9 @@ function handleError()
   if (_state.retryPendingId === null)
   {
     _state.retryPendingId = setTimeout(function() {
+      log('retrying ' + location.hash);
       _state.retryPendingId = null;
-      _router.run(location.hash);
+      _router.processHash();
     }, _config.ERROR_RETRY_DELAY);
   }
 }
