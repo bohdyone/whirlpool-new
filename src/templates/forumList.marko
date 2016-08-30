@@ -16,7 +16,7 @@
                 <div class="title"><a href="#forum/${forum.ID}/${data.slashFilter(forum.TITLE)}">${forum.TITLE}</a></div>
               </td>
               <td class="threads">
-                <div for(thread in forum.THREADS)><a href="https://forums.whirlpool.net.au/forum-replies.cfm?t=${thread.ID}&p=-1&#bottom">$!{thread.TITLE}</a> (n mins ago)</div>
+                <div for(thread in forum.THREADS)><a href="https://forums.whirlpool.net.au/forum-replies.cfm?t=${thread.ID}&p=-1&#bottom">$!{thread.TITLE}</a> (${data.timeSince(thread.LAST_DATE)})</div>
               </td>
             </tr>
 

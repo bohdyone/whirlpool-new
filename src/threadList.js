@@ -23,12 +23,7 @@ function processThreadData(data, xhr)
   var crumb = '';
   var template = marko.load(threadListTpl);
 
-  data.minsSince = function(dateTime)
-  {
-    var now = new Date();
-    var then = new Date(dateTime);
-    return Math.floor((now - then) / 1000 / 60);
-  };
+  data.timeSince = common.timeSince
 
   template.render(data, function(err, html, out) {
 

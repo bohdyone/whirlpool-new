@@ -96,7 +96,8 @@ function processForumListAndThreads()
 
   var tplData = {
     COLUMNS: [column1, column2],
-    slashFilter: common.slashFilter
+    slashFilter: common.slashFilter,
+    timeSince: common.timeSince
   };
 
   common.logTiming('process', common.timing().load);

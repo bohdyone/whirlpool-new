@@ -13,12 +13,14 @@ module.exports =
   buildServiceUrl: buildServiceUrl,
   router: router,
   timing: timing,
-  config: config
+  config: config,
+  timeSince: timeSince,
 };
 
 // Imports
 var aja = require('aja');
 var domready = require('domready');
+var HumanTime = require('custom-human-time');
 
 
 // App state
@@ -166,4 +168,18 @@ function setContent(content, el_name)
 {
   document.getElementById(el_name).innerHTML = content;
   showLoading(false);
+}
+
+function timeSince(dateTime)
+{
+  var now = new Date();
+  var then = new Date(dateTime);
+  var time = (now - then);
+  if (time < 1000*10)
+  {
+    return 'moments ago';
+  }
+
+  var humanTime = new HumanTime();
+  return humanTime.print(time) + ' ago';
 }
